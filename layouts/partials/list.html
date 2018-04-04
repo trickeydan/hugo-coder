@@ -3,9 +3,7 @@
   <ul>
     {{ range .Paginator.Pages }}
     <li>
-      {{ if not (eq (.Date.Format "January 2, 2006") "January 1, 0001") }}
-        <span>{{ .Date.Format "January 2, 2006" }}</span>
-      {{ end }}
+      <span>{{ .Date.Format "January 2, 2006" }}</span>
       <a href="{{ .URL }}">{{ .Title }}</a>
     </li>
     {{ end }}

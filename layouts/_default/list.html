@@ -1,6 +1,11 @@
 {{ define "title" }}
   {{ .Title }} · {{ .Site.Title }}
 {{ end }}
+
 {{ define "content" }}
-  {{ partial "list.html" . }}
+  {{ if .Content }}
+    {{ partial "page.html" . }}
+  {{ else }}
+    {{ partial "list.html" . }}
+  {{ end }}
 {{ end }}
