@@ -2,6 +2,7 @@
 @fg-color: #323232;
 @darker-bg-color: #dcdcdc;
 @darker-fg-color: #000;
+@link-color: #3366CC;
 
 
 *,
@@ -42,6 +43,16 @@ a {
 
 p {
   margin: 1.6rem 0 1.6rem 0;
+  a {
+    font-weight: 400;
+    color: @darker-fg-color;
+    text-decoration: underline;
+    text-underline-position: under;
+    &:focus,
+    &:hover {
+      color: @link-color;
+    }
+  }
 }
 
 h1,
@@ -118,6 +129,31 @@ blockquote {
   padding-left: 1.6rem;
   font-style: italic;
 }
+
+th, td {
+  padding: 1.6rem;
+}
+table {
+  border-collapse: collapse;
+}
+table td, table th {
+  border: 2px solid @darker-fg-color;
+}
+table tr:first-child th {
+  border-top: 0;
+}
+table tr:last-child td {
+  border-bottom: 0;
+}
+table tr td:first-child,
+table tr th:first-child {
+  border-left: 0;
+}
+table tr td:last-child,
+table tr th:last-child {
+    border-right: 0;
+}
+
 
 img {
   max-width: 100%;

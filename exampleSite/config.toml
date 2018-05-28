@@ -12,11 +12,19 @@ pygmentsstyle = "b2"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
+disqusShortname = "yourdiscussshortname"
+
 [params]
     author = "John Doe"
     description = "John Doe's personal website"
     keywords = "blog,developer,personal"
     info = "Full Stack DevOps and Magician"
+
+    hideCredits = false
+    hideCopyright = false
+
+    # Custom CSS
+	custom_css = []
 
 [[params.social]]
     name = "Github"
